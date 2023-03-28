@@ -113,9 +113,3 @@ def sat_table_mask(rgb_val, mask_size):
             image[z][i] = -1*((D - B - C + A)/mask_size**2)
 
     return image
-vals = read_rgbval("roadgrayscale.png")
-
-# show_image(sat_table_mask(vals, 71))
-img_1 = sat_table_mask(vals, 71)
-img_2 = naive_approach_mask(vals, 71)
-save_image("Blurroad.png",img_1)
